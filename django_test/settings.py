@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 
 import os
 ALLOWED_HOST = os.environ.get('ALLOWED_HOST', '')
+DEBUG_MODE = os.environ.get('DEBUG_MODE', True)
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
