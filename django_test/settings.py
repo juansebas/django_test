@@ -14,6 +14,9 @@ import os
 ALLOWED_HOST = os.environ.get('ALLOWED_HOST', '')
 DEBUG_MODE = os.environ.get('DEBUG_MODE', True)
 
+if isinstance(DEBUG_MODE, str):
+    DEBUG_MODE = True if DEBUG_MODE.lower() in ['t', 'true'] else False
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -26,6 +29,7 @@ SECRET_KEY = 'lh)j&t&japl)h0by%#@$fubo=1_4p%4#an#9s-z89p#37iy57f'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = DEBUG_MODE
+
 
 ALLOWED_HOSTS = [ALLOWED_HOST]
 
