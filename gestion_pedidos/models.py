@@ -3,14 +3,14 @@ from django.db import models
 # Create your models here.
 
 
-class Clients(models.Model):
+class Client(models.Model):
     name = models.CharField(max_length=30)
     address = models.CharField(max_length=50)
     email = models.EmailField()
     phone = models.CharField(max_length=20)
 
 
-class Articles(models.Model):
+class Article(models.Model):
     name = models.CharField(max_length=30)
     section = models.CharField(max_length=20)
     email = models.EmailField()

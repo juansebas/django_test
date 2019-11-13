@@ -85,8 +85,6 @@ WSGI_APPLICATION = 'django_test.wsgi.application'
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 
-
-
 if config('DATABASE_ENV') == 'remote':
     DATABASES = {
         'default': dj_database_url.config(
@@ -100,7 +98,7 @@ else:
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
             'NAME': 'order_admin',
             'USER': 'postgres',
-            'PASSWORD': '',
+            'PASSWORD': config('DATABASE_PASSWORD'),
             'HOST': '127.0.0.1',
             'DATABASE_PORT': '5432'
         }
