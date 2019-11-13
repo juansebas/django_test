@@ -93,7 +93,6 @@ if config('DATABASE_ENV') == 'remote':
             default=config('DATABASE_URL')
         )
     }
-    DATABASES['default']['OPTIONS']['sslmode']
 else:
     # local
     DATABASES = {
